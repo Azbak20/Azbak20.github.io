@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Azbak Nisar</div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+  
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="./home.html">Home</a>
+                <a href="#">Portfolio</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+          </div>
+  
+          <!-- Use any element to open/show the overlay navigation menu -->
+          <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+    </nav>
+
+    <div class="heading">
+        <h1>Welcome to My Works</h1>
+        <p>Explore my portfolio and discover my creative projects.</p>
+    </div>
+
+
+    <div class="container1">
+        <div class="gallery">
+            <div class="card" onclick="goToWork('./gallery.html')">
+                <img src="./images/hero1.jpg" alt="Graphic Design">
+                <div class="card-content">
+                    <h3>Graphic Design</h3>
+                    <p>A collection of stunning graphic designs crafted to perfection.</p>
+                </div>
+            </div>
+            <div class="card" onclick="goToWork('./galleryp.html')">
+                <img src="./images/photography1.jpg" alt="Photography">
+                <div class="card-content">
+                    <h3>Photography</h3>
+                    <p>Explore captivating photographs capturing moments and emotions.</p>
+                </div>
+            </div>
+            <div class="card" onclick="goToWork('./galleryv.html')">
+                <img src="./images/videography1.jpg" alt="Videography">
+                <div class="card-content">
+                    <h3>Videography</h3>
+                    <p>Engaging videos that tell stories and capture attention.</p>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+
+    <script>
+        function goToWork(url) {
+            window.location.href = url;
+        }
+    </script>
+    <script src="hbmenu.js"></script>
+</body>
+</html>

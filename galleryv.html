@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile</title>
+    <link rel="stylesheet" href="newstyles.css"> <!-- Use newstyles.css -->
+</head>
+<body>
+    <nav>
+        <div class="logo">Azbak Nisar</div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+                    <!-- Button to close the overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                      >&times;</a
+                    >
+          
+                    <!-- Overlay content -->
+                    <div class="overlay-content">
+                        <a href="./index.html">Home</a>
+                        <a href="./portfolio.html">Portfolio</a>
+                        <a href="./contact.html">Contact</a>
+                    </div>
+                  </div>
+          
+                  <!-- Use any element to open/show the overlay navigation menu -->
+                  <span onclick="openNav()"><div><div class="menubars"></div><div class="menubars"></div><div class="menubars"></div></div></span>
+    </nav>
+
+    <div class="heading">
+        <h1>Video Gallery</h1>
+        <p>Explore a collection of stunning videos.</p>
+    </div>
+
+        <section class="gallery">
+            <!-- Repeat the following div block for each video -->
+            <div class="video">
+                <video controls>
+                    <source src="./videos/video1.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="./videos/video2.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="./videos/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="./videos/video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="./videos/video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Repeat this block for each video -->
+        </section>
+        <div class="modal" id="modal">
+            <span class="close" id="close">&times;</span>
+            <video controls id="modal-video">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="hbmenu.js"></script>
+    </body>
+    </html>
+    

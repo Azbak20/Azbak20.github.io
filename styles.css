@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #000000; /* Set font color to black */
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80vh;
+    padding: 0px;
+    margin: 0px;
+}
+.container1 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.text {
+    flex: 4; /* Adjust the proportion of the text area */
+    padding: 20px;
+    color: #000000; /* Black text color */
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+    font-size: 6rem; /* Increase font size */
+    line-height: 0.9; /* Adjust the line height */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    max-width: 80%;
+}
+
+.image {
+    flex: 3; /* Adjust the proportion of the image area */
+    background-image: url('./images/hero3.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    filter: contrast(120%);
+    height: 100%; /* Set height to fill the container */
+    width: 100%; /* Set width to fill the container */
+    border-radius: 50%;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.heading h1 {
+    font-size: 3rem;
+    margin-bottom: 1px;
+    color: #333333; /* Dark gray color */
+}
+
+.heading p {
+    font-size: 1.2rem;
+    color: #666666; /* Medium gray color */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap within the gallery */
+    max-width: 1200px; /* Set maximum width of the gallery */
+    justify-content: center;
+    
+}
+
+.card {
+    width: 345px; /* Adjust the width of each card (3 cards per row) */
+    height:345px;
+    margin: 10px;
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Position relative for absolute positioning of gradient overlay */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire card */
+    border-radius: 10px; /* Ensure image has rounded corners */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Start gradient from the bottom */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.712) 0%, rgba(0, 0, 0, 0.081) 100%); /* Dark gradient starts from bottom */
+    border-radius: 10px; /* Ensure gradient overlay has rounded corners */
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.card-content h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+}
+
+
+
+.headingG {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.headingG h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #333333; /* Dark gray color */
+}
+
+.headingG p {
+    font-size: 1.2rem;
+    color: #666666; /* Medium gray color */
+}
+
+
+.galleryG {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.column img {
+    width: 250px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.column img:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Caption of Modal Image */
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, .caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span {
+    display: none;
+  }
+  
+  /* The Overlay (background) */
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .menubars {
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 3px;
+    height: 2px;
+    width: 23px;
+  }
+
+/* 100% Image Width on Small Screens */
+@media only screen and (max-width: 950px) {
+    .image {
+        display: none;
+    }
+    .column {
+        width: 100%;
+    }
+    span {
+        display: contents;
+      }
+    .nav-links {
+        display: none;
+    }
+    .text {
+        flex: 4; /* Adjust the proportion of the text area */
+        padding: 10px;
+        color: #000000; /* Black text color */
+    }
+    h1 {
+        font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+        font-size: 4rem; /* Increase font size */
+        line-height: 0.9; /* Adjust the line height */
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1rem;
+        max-width: 80%;
+    }
+    .logo {
+        font-family: 'Rock Salt', cursive;
+        font-size: 1rem;
+    }
+    .heading h1 {
+        font-size: 2.5rem;
+    }
+    
+    .heading p {
+        font-size: 1rem;
+        color: #666666; /* Medium gray color */
+    }
+    
+    
+    .gallery {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap within the gallery */
+        max-width: 1000px; /* Set maximum width of the gallery */
+        justify-content: center;
+        
+    }
+    
+    .card {
+        width: 250px; /* Adjust the width of each card (3 cards per row) */
+        height: 250px;
+        margin: 10px;
+        overflow: hidden; /* Hide overflowing content */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative; /* Position relative for absolute positioning of gradient overlay */
+    }
+
+}

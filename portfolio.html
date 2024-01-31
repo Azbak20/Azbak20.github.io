@@ -40,33 +40,42 @@
     </div>
 
 
-    <div class="container1">
-        <div class="gallery">
-            <div class="card" onclick="goToWork('./gallery.html')">
-                <img src="./images/hero1.jpg" alt="Graphic Design">
-                <div class="card-content">
-                    <h3>Graphic Design</h3>
-                    <p>A collection of stunning graphic designs crafted to perfection.</p>
-                </div>
+        <div class="container1">
+      <div class="gallery">
+        <a href="./gallery.html">
+          <div class="card" onclick="goToWork('./gallery.html')">
+            <img src="./images/hero1.jpg" alt="Graphic Design" />
+            <div class="card-content">
+              <h3>Graphic Design</h3>
+              <p>
+                A collection of stunning graphic designs crafted to perfection.
+              </p>
             </div>
-            <div class="card" onclick="goToWork('./galleryp.html')">
-                <img src="./images/Photography1.jpg" alt="Photography">
-                <div class="card-content">
-                    <h3>Photography</h3>
-                    <p>Explore captivating photographs capturing moments and emotions.</p>
-                </div>
+          </div>
+        </a>
+        <a href="./galleryp.html">
+          <div class="card" onclick="goToWork('./galleryp.html')">
+            <img src="./images/Photography1.jpg" alt="Photography" />
+            <div class="card-content">
+              <h3>Photography</h3>
+              <p>
+                Explore captivating photographs capturing moments and emotions.
+              </p>
             </div>
-            <div class="card" onclick="goToWork('./galleryv.html')">
-                <img src="./images/Videography1.jpg" alt="Videography">
-                <div class="card-content">
-                    <h3>Videography</h3>
-                    <p>Engaging videos that tell stories and capture attention.</p>
-                </div>
+          </div>
+        </a>
+        <a href="./galleryv.html">
+          <div class="card" onclick="goToWork('./galleryv.html')">
+            <img src="./images/Videography1.jpg" alt="Videography" />
+            <div class="card-content">
+              <h3>Videography</h3>
+              <p>Engaging videos that tell stories and capture attention.</p>
             </div>
-            <!-- Add more cards as needed -->
-        </div>
+          </div>
+        </a>
+        <!-- Add more cards as needed -->
+      </div>
     </div>
-
     <script>
         function goToWork(url) {
             window.location.href = url;

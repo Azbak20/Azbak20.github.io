@@ -363,7 +363,7 @@ span {
         font-size: 1rem;
         max-width: 80%;
     }
-    .logo {
+    .logo a{
         font-family: 'Rock Salt', cursive;
         font-size: 1rem;
         color: #000000; /* Set font color to black */
